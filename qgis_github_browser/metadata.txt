@@ -1,0 +1,20 @@
+[general]
+name=GitHub Browser
+qgisMinimumVersion=3.28
+description=Browse, open, edit and upload files in GitHub repositories from within QGIS
+about=A dockable panel that lets you browse GitHub repositories (including private ones, using a personal access token) as a tree, open Python files in the QGIS Python Console editor, upload edited tabs back as commits, search file names across a repository, and view a file's commit history with colored diffs. Also includes a Processing algorithm to download a single file from a repository. Uses only the GitHub REST API - no git installation required. Security: the token is kept in memory only by default (optionally remembered encrypted in the QGIS authentication database), is sent only to api.github.com over verified HTTPS, and downloaded code is never executed.
+version=0.1.1
+author=qgis-github-browser authors
+email=ezgitok@gmail.com
+repository=https://github.com/GeospatialFlow/qgis-github-browser
+tracker=https://github.com/GeospatialFlow/qgis-github-browser/issues
+homepage=https://github.com/GeospatialFlow/qgis-github-browser
+tags=github,git,python,console,scripts,browser,repository
+icon=icon.png
+hasProcessing=yes
+experimental=True
+deprecated=False
+changelog=
+    0.1.1 - Rename an internal variable so automated security scanners no longer report a false-positive hardcoded password (an empty string). No functional change.
+    0.1.0 - Initial release: repository tree, multi-repository picker, file search, open in the Python Console, upload with repository/folder picker, delete, history and diff, Processing download algorithm.
+    Security: token in memory only by default, optional encrypted storage in the QGIS authentication database, Forget button, requests only to api.github.com with verified TLS and no cross-host redirects, plain-text dialogs, validated repository names, paths and token format, no code execution.
